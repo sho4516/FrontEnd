@@ -1,0 +1,129 @@
+<!-- <h2>Add Product Here</h2>
+<div class="container">
+  <div class="col-md-6">
+    <form [formGroup]="service.formModelProduct" autocomplete="off" (submit)="onSubmit()">
+      <div class="form-group required">
+        <label>ProductName</label>
+        <input type="text" class="form-control" formControlName="ProductName">
+      </div>
+      <div class="form-group required">
+          <label>ProductPrice</label>
+          <input type="text" class="form-control" formControlName="ProductPrice">
+      </div>
+      <div class="form-group required">
+            <label>ProductDiscount</label>
+            <input type="text" class="form-control" formControlName="ProductDiscount">
+      </div>
+      <div class="form-group required">
+              <label>ProductDescription</label>
+              <input type="text" class="form-control" formControlName="ProductDescription">
+      </div>
+      <div class="form-group">
+          <label>ProductStock</label>
+          <input type="text" class="form-control" formControlName="ProductStock">
+      </div>
+
+
+      <div class="form-group">
+          <label for="Category">Category</label>
+            <select (mouseenter)="onSub()" name="Category" id="Category" class="form-control" formControlName="Category_ID">
+              <option *ngFor="let c of category" [value]="c.categoryId" >
+                {{c.categoryName}}
+              </option>
+            </select>
+        </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-8 offset-md-2">
+        <input type="submit" class="btn btn-primary" value="ADD">
+    </div>
+    </div>
+    </form>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+<div class="container">
+
+  <section class="panel panel-default">
+<div class="panel-heading">
+<h3 class="panel-title">ADD PRODUCTS</h3>
+</div>
+<div class="panel-body">
+
+<form [formGroup]="service.formModelProduct" autocomplete="off" (submit)="onSubmit()" class="form-horizontal" role="form">
+
+   <div class="form-group required">
+    <label for="name" class="col-sm-3 control-label">Product Name</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" name="name" id="name" placeholder="ENTER NAME HERE" formControlName="ProductName">
+    </div>
+  </div> <!-- form-group // -->
+  <div class="form-group required">
+    <label for="name" class="col-sm-3 control-label">Product Price</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" name="name" id="name" placeholder="ENTER PRICE HERE" formControlName="ProductPrice">
+    </div>
+  </div> <!-- form-group // -->
+  <div class="form-group required">
+      <label for="name" class="col-sm-3 control-label">Product Image</label>
+      <div class="col-sm-9">
+        <input type="text" class="form-control" name="name" id="name" placeholder="ENTER IMAGE URL HERE" formControlName="ProductImage">
+      </div>
+    </div> <!-- form-group // -->
+  <div class="form-group">
+    <label for="about" class="col-sm-3 control-label">Product Description</label>
+    <div class="col-sm-9">
+      <textarea class="form-control" name="about" id="about" formControlName="ProductDescription"></textarea>
+    </div>
+  </div> <!-- form-group // -->
+  <div class="form-group">
+    <label for="qty" class="col-sm-3 control-label">Product Discount</label>
+    <div class="col-sm-3">
+   <input type="text" class="form-control" name="qty" id="qty" placeholder="ENTER DISCOUNT HERE" formControlName="ProductDiscount">
+    </div>
+  </div> <!-- form-group // -->
+  <div class="form-group">
+    <div class="col-sm-3">
+	  <label class="control-label small" for="date_start">Product Stock: </label>
+	  <input type="text" class="form-control" name="date_start" id="date_start" placeholder="ENTER STOCK HERE" formControlName="ProductStock">
+    </div>
+    <div class="form-group">
+        <div class="col-sm-3">
+      <label for="Category">Category</label>
+        <select (mouseenter)="onSub()" name="Category" id="Category" class="form-control" formControlName="Category_ID">
+          <option *ngFor="let c of category" [value]="c.categoryId" >
+            {{c.categoryName}}
+          </option>
+        </select>
+        </div>
+    </div>
+</div> <!-- form-group // -->
+  <hr>
+  <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <button type="submit" class="btn btn-primary">ADD</button>
+    </div>
+  </div> <!-- form-group // -->
+</form>
+
+</div><!-- panel-body // -->
+</section><!-- panel// -->
+
+
+</div> <!-- container// -->
+
+
+
+
+
+
+
+
+
+

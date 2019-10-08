@@ -1,1 +1,360 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+
+div.form-group.required>label:first-child:after{
+  content:'*';
+  color : #dc3545;
+  padding-left: 6px;
+}
+
+
+body{
+  background-color:white;
+}
+
+input.form-control,input.form-control:focus{
+  background-color: white;
+  color:black;
+  border: 1px solid #636b7b;
+
+}
+
+input.form-control:focus{
+  box-shadow: none;
+}
+
+button[type=submit].btn{
+  border-radius: 20px;
+  background-color: #04c582;
+  color: #fff;
+}
+
+div.form-group label:not(.text-danger){
+  color: black;
+  font-weight: 700;
+}
+
+div.form-group.required>label:first-child:after{
+  content:'*';
+  color: red;
+  padding-left: 5px;
+}
+
+#toast-container > div {
+  opacity:1;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.wrapped-div {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #2e3137;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+}
+
+
+.tab-header{
+  text-align: center;
+}
+
+.tab-header h2.active {
+  color: #fff;
+  border-bottom: 4px solid #fff;
+}
+
+.tab-header h2 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  display:inline-block;
+  padding: 30px 40px 10px 40px;
+  cursor: pointer;
+  color: #545d6a;
+  border-bottom: 2px solid #545d6a;
+}
+
+.tab-header h2:focus {
+    outline: none;
+}
+
+form{
+    margin: 0px 16px;
+}
+
+div.form-group input.invalid{
+  border: 1px solid #dc3545;
+}
+div.form-group label:first-child{
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.carousel-innerimg {
+  width: 100%;
+  height: 100%;
+  }
+
+  ._20my3- {
+    text-align: center;
+    padding: 30px 0 36px;
+    background: #fff;
+}
+
+._20my3- ._3y1KzS {
+  height: 162px;
+}
+
+._20my3- .hJKWmk {
+  display: block;
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+._20my3- ._2VeR_A {
+  display: block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+._20my3- ._2Z-ax5 {
+  font-size: 14px;
+  margin-top: 20px;
+  font-weight: 400;
+  padding: 12px 72px;
+}
+
+._2AkmmA._7UHT_c {
+  background: #fb641b;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+  border: none;
+  color: #fff;
+}
+
+.bhgxx2 {
+  display: block;
+}
+
+.col-12-12 {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+._1HmYoV.hCUpcT {
+  -webkit-flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
+}
+
+._1HmYoV._35HD7C {
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+._1HmYoV {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.col-12-12 {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+._1HmYoV {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+._1HmYoV._35HD7C {
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+._1HmYoV._35HD7C {
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+}
+
+.col-12-12 {
+  width: 100%;
+}
+
+.bhgxx2 {
+  display: block;
+}
+
+.col-3-12 {
+  width: 25%;
+}
+
+._2EoEbp ._1lBhq8 {
+  font-size: 18px;
+  line-height: 56px;
+  padding: 0 24px;
+  font-weight: 500;
+}
+
+.bhgxx2 {
+  display: block;
+}
+
+.col-9-12 {
+  width: 75%;
+}
+
+._2KHWIh._3yhhU7 {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 400px;
+}
+
+._2KHWIh {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+._2KHWIh ._29cQtz {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 90px;
+  margin-right: 12px;
+}
+
+._2KHWIh ._1nBnpg {
+  margin-left: 8px;
+}
+
+._2KHWIh ._1nBnpg, ._2KHWIh ._3LdjIv {
+  font-weight: 500;
+  color: #878787;
+}
+
+._2KHWIh ._1mGkI4._3yhhU7 {
+  max-width: calc(100% - 102px);
+}
+
+._2KHWIh ._1mGkI4 {
+  position: relative;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+}
+
+._23_I2B {
+  margin-bottom: 16px;
+}
+
+._3ybBIU {
+  padding-bottom: 56px;
+  min-width: 978px;
+  position: relative;
+}
+
+._1tz-RS {
+  position: fixed;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  will-change: transform;
+  width: 100%;
+  height: 56px;
+  background-color: #2874f0;
+  color: #f0f0f0;
+  z-index: 10;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+._1tz-RS ._1S7OK2 {
+  height: 100%;
+  min-width: 124px;
+}
+
+.table>tbody>tr>td, .table>tfoot>tr>td{
+  vertical-align: middle;
+}
+@media screen and (max-width: 600px) {
+  table#cart tbody td .form-control{
+      width:20%;
+      display: inline !important;
+  }
+  .actions .btn{
+      width:36%;
+      margin:1.5em 0;
+  }
+
+  .actions .btn-info{
+      float:left;
+  }
+  .actions .btn-danger{
+      float:right;
+  }
+
+  table#cart thead { display: none; }
+  table#cart tbody td { display: block; padding: .6rem; min-width:320px;}
+  table#cart tbody tr td:first-child { background: #333; color: #fff; }
+  table#cart tbody td:before {
+      content: attr(data-th); font-weight: bold;
+      display: inline-block; width: 8rem;
+  }
+
+
+
+  table#cart tfoot td{display:block; }
+  table#cart tfoot td .btn{display:block;}
+
+}
+
+
+
+
+

@@ -1,0 +1,28 @@
+<img src="./assets/img/single_user.png" class="mx-auto d-block" style=" align: center;">
+<div class="container">
+  <div class="col-md-12">
+    <form class="mb-4" [formGroup]="service.formModelLogin" autocomplete="off" (submit)="onSubmit()">
+      <div class="form-group" required>
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="Email">
+      </div>
+      <div class="form-group" required>
+          <label>Password</label>
+          <input type="password" class="form-control" formControlName="Password">
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-8 offset-md-2">
+          <input type="submit" class="btn btn-success btn-lg btn-block" value="Log In">
+      </div>
+      <!-- <a class="btn btn-block btn-outline-info rounded-pill" (click)="signInWithGoogle()"> <i
+        class="fab fa-google"></i>   Login via Google</a> -->
+    </div>
+    <!-- <div class="form-row">
+      <div class="form-group col-md-8 offset-md-2">
+        <button type="button" class="btn btn-success" (click)="this.fun()">Sign Up</button>
+    </div>
+  </div> -->
+    </form>
+  </div>
+</div>
+

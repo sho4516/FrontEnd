@@ -1,0 +1,107 @@
+<!-- <div class="container" >
+    <section class="panel panel-default">
+    <h3 class="font-weight-bolder text-success"> Update Products </h3>
+  <div class="container">
+  <form (ngSubmit)="editProduct(us)" #us="ngForm" >
+    <div *ngIf="model">
+      <div class="form-group col-md-6" >
+          <input type="hidden" class="form-control" [(ngModel)] ="id" id="productId" name="productId"   />
+        </div>
+  <div class="form-group col-md-6" >
+    <label for="name">Product Name: </label>
+    <input type="text" class="form-control"[(ngModel)] ="model.productName" id="productName" name="productName"   />
+  </div>
+  <div class="form-group col-md-6">
+    <label for="description">Description: </label>
+    <input type="textarea" class="form-control" id="productDescription" name="productDescription" [(ngModel)] ="model.productDescription"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="price">Price: </label>
+    <input type="number" class="form-control" id="productPrice" name="productPrice" [(ngModel)] ="model.productPrice"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="detail_Description"> Product Discount: </label>
+    <input type="text" class="form-control" id="productDiscount" name="productDiscount" [(ngModel)] ="model.productDiscount"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="quantity"> Quantity: </label>
+    <input type="number" class="form-control" id="productStock" name="productStock" [(ngModel)] ="model.productStock"/>
+  </div>
+  <div class="form-group col-md-6">
+    <label for="imagePath"> Product Image URL : </label>
+    <input type="text" class="form-control" id="productImage" name= "productImage" [(ngModel)] ="model.productImage"/>
+  </div>
+  <div class="form-group floatRight col-md-3">
+    <input type="submit"  value=Submit />
+  </div>
+
+  <div class="form-group floatRight col-md-3">
+    <button [routerLink]="['/land']" (click)=this.deleteProduct(model.productId)>Delete</button>
+  </div>
+</div>
+  </form>
+  </div>
+  </section>
+  </div> -->
+
+
+
+
+  <div class="container">
+
+      <section class="panel panel-default">
+    <div class="panel-heading">
+    <h3 class="panel-title">UPDATE PRODUCTS</h3>
+    </div>
+    <div class="panel-body">
+
+        <form (ngSubmit)="editProduct(us)" #us="ngForm" >
+            <div *ngIf="model">
+              <div class="form-group col-md-6" >
+                  <!-- <label for="name">Product ID: </label> -->
+                  <input type="hidden" class="form-control" [(ngModel)] ="id" id="productId" name="productId"   />
+                </div>
+          <div class="form-group col-md-6" >
+            <label for="name">Product Name: </label>
+            <input type="text" class="form-control"[(ngModel)] ="model.productName" id="productName" name="productName"   />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="description">Description: </label>
+
+            <!-- <textarea class="form-control" id="description" name="description" [(ngModel)] ="model.productDescription" formControlName="ProductDescription"></textarea> -->
+
+            <input type="textarea" class="form-control" id="productDescription" name="productDescription" [(ngModel)] ="model.productDescription"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="price">Price: </label>
+            <input type="number" class="form-control" id="productPrice" name="productPrice" [(ngModel)] ="model.productPrice"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="detail_Description"> Product Discount: </label>
+            <input type="text" class="form-control" id="productDiscount" name="productDiscount" [(ngModel)] ="model.productDiscount"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="quantity"> Quantity: </label>
+            <input type="number" class="form-control" id="productStock" name="productStock" [(ngModel)] ="model.productStock"/>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="imagePath"> Product Image URL : </label>
+            <input type="text" class="form-control" id="productImage" name= "productImage" [(ngModel)] ="model.productImage"/>
+          </div>
+          <div class="form-group floatRight col-md-3">
+            <button type="submit"  value=Submit class="btn btn-primary" >ADD</button>
+          </div>
+
+          <div class="form-group floatRight col-md-3">
+            <button (click)=this.deleteProduct(model.productId) class="btn btn-primary">Delete</button>&nbsp;
+            <button [routerLink]="['/Land']" class="btn btn-primary">Back</button>
+
+          </div>
+        </div>
+          </form>
+
+    </div><!-- panel-body // -->
+    </section><!-- panel// -->
+
+
+    </div> <!-- container// -->

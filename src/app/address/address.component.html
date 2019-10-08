@@ -1,0 +1,146 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">AMAZON</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/Land">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Edit Profile
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/DetailEdit/' + this.userIdd]">Update Profile</a>
+            <!-- <a class="dropdown-item" href="#">Update Address</a>
+            <div class="dropdown-divider"></div> -->
+            <!-- <a class="dropdown-item" [routerLink]="['/users/Login']">Login</a> -->
+          </div>
+        </li>
+        <li  class="nav-item">
+          <a *ngIf="role == 'user'" class="nav-link" tabindex="-1" aria-disabled="true"><b>WELCOME {{userName | uppercase}} 😊</b></a>
+          <a *ngIf="role == 'admin'" class="nav-link" tabindex="-1" aria-disabled="true"><strong> WELCOME ADMIN {{userName | uppercase}} 😉</strong></a>
+
+        </li>
+        <li>
+          <a *ngIf="role == 'admin'" href="/Admin/products" class="nav-link">Add Product</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a [routerLink]="['/cart']"><img title="Show Cart" style="height: 40px; width: 40px" src="data:image/png;base64,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" alt=""></a>
+        &nbsp;&nbsp;
+        <input style="background-color:white; color: black;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="Name" id="Name" name="Name" (input)="Search()">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+
+          <a *ngIf="role" [routerLink]="['/Land']" class="fa fa-sign-out" aria-hidden="true" (click)="Logout()">LogOut</a>
+          <a *ngIf="!role" [routerLink]="['/users/Login']" class="fa fa-sign-in" aria-hidden="true">Login</a>
+
+      </form>
+
+    </div>
+  </nav>
+
+
+
+
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+        <form>
+
+          <div class="row">
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+              <label for="ccnum">Credit card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+               <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-50">
+              <h3>Saved Addresses</h3>
+              <span>
+                <button class="btn btn-info" (click)="getAddress()">Get Addresses</button>
+              </span>
+
+              <div *ngFor="let a of addresses">
+                <input type="radio" name="address" value="male">&nbsp;{{a.address1}},{{a.address2}},{{a.city}},{{a.state}} <br>
+              </div>
+
+              <a href='/addAddress'>Add new Address</a>
+
+            </div>
+
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+        </form>
+        <button  (click)="onSubmit()" class="btn btn-info">Place Order</button>
+
+      </div>
+    </div>
+  </div>
+
+<footer class="text-light page-footer bg-dark">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-3 col-lg-4 col-xl-3">
+          <h5>About Us</h5><br><br>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+          <h5>Products</h5>
+
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+          <h5>Help</h5>
+
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3">
+          <h5>Contact Us</h5>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+

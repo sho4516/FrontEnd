@@ -1,0 +1,252 @@
+<!-- <div class="container-fluid">
+    <nav class="navbar navbar-default navbar-inverse" style="position: fixed;width: 100%;" >
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand"><img src="https://www.underconsideration.com/brandnew/archives/flipkart_logo_detail_icon.jpg" style="width: 35px; height: 35px;"></a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" [(ngModel)]="Name" name="Name" id="Name" (input)="Search()" >
+              </div>
+              <button type="submit" class="btn btn-default" >Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a [routerLink]="['/users/Login']">Login</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a [routerLink]="['/Admin/products']">Add Products</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav></div> -->
+<body>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">AMAZON</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/Land">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" [routerLink]="['/orderSummary']">My Orders</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Edit Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" [routerLink]="['/DetailEdit/' + this.userIdd]">Update Profile</a>
+                  <!-- <a class="dropdown-item" href="#">Update Address</a>
+                  <div class="dropdown-divider"></div> -->
+                  <!-- <a class="dropdown-item" [routerLink]="['/users/Login']">Login</a> -->
+                </div>
+              </li>
+              <li  class="nav-item">
+                <a *ngIf="role == 'user'" class="nav-link" tabindex="-1" aria-disabled="true"><b>WELCOME {{userName | uppercase}} 😊</b></a>
+                <a *ngIf="role == 'admin'" class="nav-link" tabindex="-1" aria-disabled="true"><strong> WELCOME ADMIN {{userName | uppercase}} 😉</strong></a>
+
+              </li>
+              <li>
+                <a *ngIf="role == 'admin'" href="/Admin/products" class="nav-link">Add Product</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <a (click)="ShowCart()"><img title="Show Cart" style="height: 40px; width: 40px" src="data:image/png;base64,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" alt=""></a>
+              &nbsp;&nbsp;
+              <input style="background-color:white; color: black;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="Name" id="Name" name="Name" (input)="Search()">
+              <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+
+                <a *ngIf="role" [routerLink]="['/Land']" class="fa fa-sign-out" aria-hidden="true" (click)="Logout()">LogOut</a>
+                <a *ngIf="!role" [routerLink]="['/users/Login']" class="fa fa-sign-in" aria-hidden="true">Login</a>
+
+            </form>
+
+          </div>
+        </nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="https://smartslider3.com/wp-content/uploads/slider144/fullwidth-product-slider1.jpeg"
+        class="a-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://smartslider3.com/wp-content/uploads/slider144/fullwidth-product-slider2.jpeg"
+        class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSgPSge0r0J33G_8lkk95Fv5UuDal3iT-fg32usVFJSodt7lARu"
+        class="d-block w-100" alt="...">
+    </div>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<marquee style="background-color: dimgray">SHOPIFFY!!!!!     SHOP AND AVAIL THE OFFERS.  </marquee>
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+<!-- <div class="main" style="margin-top: 60px;height: 1500px;"> -->
+<div class="container">
+  <div class="row col-md-12">
+    <div *ngFor="let prod of model" class="col-md-3">
+      <div class="card " style="width: 18rem;" >
+        <a [routerLink]="['/Admin/products/' + prod.productId]" ><img style="height: 200px; width: 200px; object-fit: contain" src="{{prod.productImage}}" class="img-thumbnail" alt="ProductImage" height=260px /></a>
+        <div class="card-body">
+          <h5 class="card-title">{{ prod.productName }}</h5>
+         </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">&#8377;{{ prod.productPrice }}</li>
+        </ul>
+        <div class="card-body">
+          <a *ngIf="(role) == 'admin'" type="button" value="update" class="social">
+            <a title="Update and Delete"  [routerLink]="['/Admin/productsUpdate/' + prod.productId]" class="card-link"><i class="fa fa-edit"></i></a>
+          </a>
+          &nbsp;
+          <button type="button" class="btn btn-danger" value="Add to Bag" (click)="AddToCart(prod.productId)">
+            Add to Cart
+          </button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+
+
+
+
+<!--rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr-->
+
+
+<footer class="text-light page-footer bg-dark">
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col-md-3 col-lg-4 col-xl-3">
+          <h5>About Us</h5><br><br>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+          <h5>Products</h5>
+
+        </div>
+
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+          <h5>Help</h5>
+
+        </div>
+
+        <div class="col-md-4 col-lg-3 col-xl-3">
+          <h5>Contact Us</h5>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+<!-- </div> -->
+
+
+ <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
+
+<!--<div  class="container">
+    <div class="row">
+        <div *ngFor="let prod of model" class="col-md-3 col-sm-3">
+            <div class="product-grid">
+                    <a [routerLink]="['/Admin/products/' + prod.productId]">
+                        <img class="img-square-wrapper img-fluid" src="{{prod.productImage}}">
+                        <img class="pic-2" src="{{prod.productImage}}">
+                    </a>
+                    <ul class="social">
+                        <li><a *ngIf="(role) == 'admin'" [routerLink]="['/Admin/productsUpdate/' + prod.productId]"  data-tip="Edit Product"><i class="fa fa-edit"></i></a></li>
+                        <li><a href="" data-tip="Add to Wishlist"><i class="fa fa-shopping-bag"></i></a></li>
+                        <li><a (click)="AddToCart(prod.productId)" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+
+                <ul class="rating">
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star"></li>
+                    <li class="fa fa-star disable"></li>
+                </ul>
+                <div class="product-content">
+                    <h3 class="title"><a href="#">{{prod.productName}}</a></h3>
+                    <div class="price">{{prod.productPrice}}
+                        <span>$20.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> -->

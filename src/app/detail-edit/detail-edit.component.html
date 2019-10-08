@@ -1,0 +1,102 @@
+<!-- <div class="jumbotron" >
+  <h3 class="font-weight-bolder text-success">Edit Profile</h3>
+<div class="container">
+
+<form (ngSubmit)="editUser(us)" #us="ngForm" >
+  <div *ngFor="let m of model">
+    <div class="form-group col-md-6" >
+        <input [(ngModel)] ="id" type="hidden" class="form-control"  id="userId" name="userId"   />
+      </div>
+<div class="form-group col-md-6" >
+  <label for="firstName">First Name: </label>
+  <input [(ngModel)] ="m.firstName" type="text" class="form-control" id="firstName" name="firstName"/>
+</div>
+<div class="form-group col-md-6">
+  <label for="lastName">lastName: </label>
+  <input type="text" class="form-control"[(ngModel)] ="m.lastName" id="lastName" name="lastName" />
+</div>
+<div class="form-group col-md-6">
+  <label for="email">email: </label>
+  <input type="text" class="form-control" id="email" name="email" [(ngModel)] ="m.email"/>
+</div>
+<div class="form-group col-md-6">
+  <label for="phone"> phone: </label>
+  <input type="text" class="form-control" id="phone" name="phone" [(ngModel)] ="m.phone"/>
+</div>
+<div class="form-group col-md-6">
+  <label for="password"> password: </label>
+  <input type="number" class="form-control" id="password" name="password" [(ngModel)] ="m.password"/>
+</div>
+<div class="form-group col-md-6">
+  <label for="profilePic"> profilePic : </label>
+  <input type="text" class="form-control" id="profilePic" name= "profilePic" [(ngModel)] ="m.profilePic"/>
+</div>
+<div class="form-group floatRight col-md-3">
+  <button class="btn btn-success" type="submit"  value=Submit > Submit</button>&nbsp;
+  <button class="btn btn-success" [routerLink]="['/Land']"> Back</button>
+
+</div>
+
+</div>
+</form>
+</div>
+</div> -->
+
+
+
+<div class="container">
+
+    <section class="panel panel-default">
+  <div class="panel-heading">
+  <h3 class="panel-title">EDIT DETAILS</h3>
+  </div>
+  <div class="panel-body">
+
+      <form (ngSubmit)="editUser(us)" #us="ngForm" >
+          <div *ngFor="let m of model">
+            <div class="form-group col-md-6" >
+                <!-- <label for="name">Product ID: </label> -->
+                <input [(ngModel)] ="id" type="hidden" class="form-control"  id="userId" name="userId"   />
+              </div>
+        <div class="form-group col-md-6" >
+          <label for="firstName">First Name: </label>
+          <input [(ngModel)] ="m.firstName" type="text" class="form-control" id="firstName" name="firstName"/>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName">lastName: </label>
+          <input type="text" class="form-control"[(ngModel)] ="m.lastName" id="lastName" name="lastName" />
+        </div>
+        <div class="form-group col-md-6">
+          <label for="email">email: </label>
+          <input type="text" class="form-control" id="email" name="email" [(ngModel)] ="m.email"/>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="phone"> phone: </label>
+          <input type="text" class="form-control" id="phone" name="phone" [(ngModel)] ="m.phone"/>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password"> password: </label>
+          <input type="password" class="form-control" id="password" name="password" [(ngModel)] ="m.password"/>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="profilePic"> profilePic : </label>
+          <input type="text" class="form-control" id="profilePic" name= "profilePic" [(ngModel)] ="m.profilePic"/>
+        </div>
+        <div class="form-group floatRight col-md-3">
+          <button class="btn btn-success" type="submit"  value=Submit > Submit</button>&nbsp;
+          <button class="btn btn-success" [routerLink]="['/Land']"> Back</button>
+
+        </div>
+
+        <!-- <div class="form-group floatRight col-md-3">
+          <button [routerLink]="['/land']" (click)=this.deleteProduct(model.productId)>Delete</button>
+        </div> -->
+        </div>
+        </form>
+
+  </div><!-- panel-body // -->
+  </section><!-- panel// -->
+
+
+  </div> <!-- container// -->
+

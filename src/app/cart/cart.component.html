@@ -1,0 +1,281 @@
+<!-- <body (load)="funTotal()">
+<table (load)="funTotal()" class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total Price</th>
+        <th scope="col">Edit</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let c of this.cart">
+      <tr>
+        <td><img style="height:90px; width: 90px" src="{{c.productImage}}" alt=""></td>
+        <td>{{c.productName}}</td>
+        <td>&#8377;{{c.price}}</td>
+        <td>&#8377;{{c.total}}</td>
+        <td><span>
+            <button class="rounded-circle" title="Add Product" class="btn btn-info" (click)=funAdd(c.productID)>➕</button>&nbsp;
+            <strong>{{c.quantity}}</strong>&nbsp;
+            <button class="rounded-circle" title="Remove Product" class="btn btn-info" (click)=funSub(c.productID)>➖</button>
+            &nbsp;
+            <button (click)=funClear(c.productID) title="Clear" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button>
+
+          </span></td>
+      </tr>
+    </tbody>
+
+</table>
+<table class="table">
+    <tbody (load)="funTotal()">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan=5>
+                <div class="text-center">
+                    <button (mouseenter)="funTotal()" class="btn btn-success">Total Price</button>&nbsp;
+                    <strong>&#8377;{{totalPrice}}/-</strong><br><br>
+                    <button class="btn btn-success">Proceed To check out</button>
+                </div>
+            </td>
+          </tr>
+    </tbody>
+</table>
+</body>
+
+<div class="container">
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th style="width:50%">Product</th>
+        <th style="width:10%">Price</th>
+        <th style="width:8%">Quantity</th>
+        <th style="width:22%" class="text-center">Subtotal</th>
+        <th style="width:10%"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-th="Product">
+          <div class="row">
+            <div class="col-sm-2 hidden-xs">
+              <img src="" alt="..." class="img-responsive" />
+            </div>
+            <div class="col-sm-10">
+              <h4 class="nomargin"></h4>
+              <p></p>
+            </div>
+          </div>
+        </td>
+        <td data-th="Price"></td>
+        <td data-th="Quantity">
+          <input type="number" class="form-control text-center" value="" />
+        </td>
+        <td data-th="Subtotal" class="text-center"></td>
+        <td class="actions" data-th="">
+          <button class="btn btn-info btn-sm">
+            <i class="fa fa-refresh"></i>
+          </button>
+          <button class="btn btn-danger btn-sm">
+            <i class="fa fa-trash-o"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="visible-xs">
+        <td class="text-center"><strong>Total </strong></td>
+      </tr>
+      <tr>
+        <td>
+          <a href="#" class="btn btn-warning"
+            ><i class="fa fa-angle-left"></i> Continue Shopping</a
+          >
+        </td>
+        <td colspan="2" class="hidden-xs"></td>
+        <td class="hidden-xs text-center"><strong>Total </strong></td>
+        <td>
+          <a href="#" class="btn btn-success btn-block"
+            >Checkout <i class="fa fa-angle-right"></i
+          ></a>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div> -->
+<body (load)="funTotal()">
+<!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">AMAZON</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse justify-content-end"
+      id="navbarsExampleDefault"
+    >
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item m-auto">
+          <a class="nav-link" href="/Land">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Product</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html"
+            >Cart <span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <form class="form-inline my-2 my-lg-0">
+        <div class="input-group input-group-sm">
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Small"
+            aria-describedby="inputGroup-sizing-sm"
+            placeholder="Search..."
+          />
+          <div class="input-group-append">
+            <button type="button" class="btn btn-secondary btn-number">
+              <i class="fa fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <a class="btn btn-success btn-sm ml-3" href="cart.html">
+          <i class="fa fa-shopping-cart"></i> Cart
+          <span class="badge badge-light">3</span>
+        </a>
+      </form>
+    </div>
+  </div>
+</nav> -->
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">AMAZON CART</h1>
+  </div>
+</section>
+
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Product</th>
+              <th scope="col">Available</th>
+              <th scope="col" class="text-center">Quantity</th>
+              <th scope="col" class="text-right">Price</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let c of this.cart">
+              <td><img style="width: 60px; height: 60px;" src="{{c.productImage}}" /></td>
+              <td>{{c.productName}}</td>
+              <td>In stock</td>
+              <td style="align-content:flex-end">
+                <span>
+                  <button class="rounded-circle" title="Add Product" style="color: honeydew" (click)=funAdd(c.productID)>➕</button>&nbsp;
+                  <strong>{{c.quantity}}</strong>&nbsp;
+                  <button class="rounded-circle" title="Remove Product" style="color: honeydew" (click)=funSub(c.productID)>➖</button>
+                  &nbsp;
+
+                </span>
+              </td>
+              <td class="text-right">{{c.total}}</td>
+              <td class="text-right">
+                <button (click)=funClear(c.productID) class="btn btn-sm btn-danger">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Sub-Total</td>
+              <td (mouseenter)="funTotal()" class="text-right">{{totalPrice}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>Shipping</td>
+              <td class="text-right">200</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td><strong>Total</strong></td>
+              <td class="text-right"><strong>{{totalPrice + 200}}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col mb-2">
+      <div class="row">
+        <div class="col-sm-12  col-md-6">
+          <button [routerLink]="['/Land']" class="btn btn-block btn-light">Continue Shopping</button>
+        </div>
+        <div class="col-sm-12 col-md-6 text-right">
+          <button [routerLink]="['/address']" class="btn btn-lg btn-block btn-success text-uppercase">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-lg-4 col-xl-3">
+        <h5>About Us</h5>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+        <h5>Products</h5>
+
+      </div>
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+        <h5>Help</h5>
+
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3">
+        <h5>Contact Us</h5>
+
+      </div>
+
+    </div>
+  </div>
+</footer>
+</body>
